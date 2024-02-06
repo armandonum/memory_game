@@ -1,0 +1,21 @@
+
+m	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¹Â8è¯¾Ø1
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8ì¯¾Ø1
+x	java:S116"]Rename this field "presentation_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÖêq8Ùº¾Ø1
+~	java:S116"bRename this field "Presentation_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©û•¦8Ùº¾Ø1
+s	java:S116"WRename this field "button_start" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆŒ¸Ü8Úº¾Ø1
+v	java:S116"URename this field "game_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹œ›äüÿÿÿÿ8Úº¾Ø1
+N
+java:S1197",Move the array designators [][] to the type.(ÀÈ»²ùÿÿÿÿ8åº¾Ø1
+N
+java:S1197",Move the array designators [][] to the type.(¨‰Õãşÿÿÿÿ8æº¾Ø1
+k
+java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ÁŞÃôüÿÿÿÿ8îº¾Ø1
+h
+java:S1117+"KRename "Presentation_background" which hides the field declared at line 14.(Ÿ¹Â8öº¾Ø1
+\
+java:S1161O":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8Ÿ»¾Ø1
+G	java:S106P"+Replace this use of System.out by a logger.(ÿÒüë8¡»¾Ø1
+o	java:S100X"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™“®şûÿÿÿÿ8£»¾Ø1
+G	java:S106t"+Replace this use of System.out by a logger.(úÇº—8µ»¾Ø1
+L	java:S106v"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8º»¾Ø1
