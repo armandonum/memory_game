@@ -1,6 +1,7 @@
 package arm.Game;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import java.util.LinkedList;
@@ -13,14 +14,15 @@ public class Game {
     JPanel presentation_panel; //caps que podemos ir cambiando
     JLabel Presentation_background;
     JLabel button_start;
-
     JPanel game_panel;
-    JLabel matriz[][];
+    JLabel FondoJuego;
+
     int mat[][];
+    int matAux[][];
    LinkedList<Integer> numberList;
     String player;//para colocar el nombre del jugador
-
     Random aleatorio;
+    JLabel name_player;
 
     //the constructor
     public Game() {
@@ -66,18 +68,64 @@ public class Game {
         game_panel.setVisible(true);
         window.add(game_panel);
 
+        //fondo de juego
+        FondoJuego = new JLabel();
+        FondoJuego.setIcon(new ImageIcon("src/main/java/arm/images/fondoJuego.png"));
+        FondoJuego.setSize(window.getWidth(), window.getHeight());
+        FondoJuego.setLocation(0, 0);
+        FondoJuego.setVisible(true);
+        game_panel.add(FondoJuego, 0);
+
+//nombre de jugador
+name_player = new JLabel();
+        name_player.setSize(160,20);
+        name_player.setLocation(20, 50);
+        name_player.setForeground(Color.red);
+        name_player.setVisible(true);
+        game_panel.add(name_player, 0);
+
+
 
 //logic matriz
         numberList= new LinkedList<>();
         aleatorio = new Random();
         mat= new int[4][5];
+        matAux= new int[4][5];
         this.numbre_randon();
+
+//matris de imagenes
+        //matriz=new JLabel[4][5];
+        LinkedList<LinkedList<JLabel>> matriz = new LinkedList<>();
+        for (int i=0;i<4;i++){
+            LinkedList<JLabel> fila = new LinkedList<>();
+            for(int j=0;j<5;j++){
+                JLabel label = new JLabel();
+                //matriz[i][j]=new JLabel();
+                label.setIcon(new ImageIcon("src/main/java/arm/images/"+matAux[i][j]+".png"));
+                //setBounds in the center
+                label.setBounds(240+(j*63),70+(i*100),63,100);
+                label.setVisible(true);
+                game_panel.add(label,0);
+                fila.add(label);
+            }
+            matriz.add(fila);
+        }
+
 
 
         //event of click
         button_start.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                System.out.println("click");
+                //System.out.println("click");
+                player = JOptionPane.showInputDialog(window, "Enter your name","whrite here");
+                while(player==null || player.equals("")){
+                    player = JOptionPane.showInputDialog(window, "Enter your name","whrite here");
+                }
+                name_player.setText("player: "+player);
+                presentation_panel.setVisible(false);
+                window.add(game_panel);
+                game_panel.setVisible(true);
+
             }
         });
 
@@ -108,14 +156,15 @@ public class Game {
             for (int j = 0; j < 5; j++) {
 
                 mat[i][j] = mezclar.get(counter++);
+                matAux[i][j] = 0;
             }
         }
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
-                System.out.print(mat[i][j] + " ");
+                System.out.print(mat[i][j] + "   ");
             }
-            System.out.println();
+            System.out.println("  ");
         }
     }
 
