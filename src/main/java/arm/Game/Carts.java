@@ -7,10 +7,10 @@ import java.util.Random;
 
 
 public class Carts {
-    LinkedList<Integer> numberList;
-    Random aleatorio;
-    int mat[][];
-    int matAux[][];
+    LinkedList<Integer> numberList=new LinkedList<>();
+    Random aleatorio=new Random();
+    int mat[][]=new int[4][5];
+    int matAux[][]=new int[4][5];
 
     public void numbre_randon() {
 
@@ -43,7 +43,7 @@ public class Carts {
             for (int j = 0; j < 5; j++) {
                 System.out.print(mat[i][j] + "   ");
             }
-            System.out.println("  ");
+            System.out.println(" - ");
         }
     }
 }

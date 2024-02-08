@@ -19,6 +19,7 @@ public class Game {
     JLabel button_start;
     JPanel game_panel;
     JLabel FondoJuego;
+    JLabel matriz[][];
 
 //    int mat[][];
 //    int matAux[][];
@@ -27,7 +28,7 @@ public class Game {
     //Random aleatorio;
     JLabel name_player;
 
-    //the constructor
+
     public Game() {
         window = new JFrame("memory game");
         window.setSize(670, 1000);// the window size is of 670x1000
@@ -79,6 +80,8 @@ public class Game {
         FondoJuego.setVisible(true);
         game_panel.add(FondoJuego, 0);
 
+
+
 //nombre de jugador
         name_player = new JLabel();
         name_player.setSize(160, 20);
@@ -90,31 +93,22 @@ public class Game {
 
 //logic matriz
         Carts cartas = new Carts();  //instanciamos la clase cartas
-        cartas.numberList = new LinkedList<>(); //instanciamos la lista de
-        cartas.aleatorio = new Random(); //
-        cartas.mat = new int[4][5];
-        cartas.matAux = new int[4][5];
         cartas.numbre_randon();
-        //this.numbre_randon();
 
 //matris de imagenes
-        //matriz=new JLabel[4][5];
+       // matriz=new JLabel[4][5];
         LinkedList<LinkedList<JLabel>> matriz = new LinkedList<>();
         for (int i = 0; i < 4; i++) {
             LinkedList<JLabel> fila = new LinkedList<>();
             for (int j = 0; j < 5; j++) {
                 JLabel label = new JLabel();
-                //matriz[i][j]=new JLabel();
-                // label.setIcon(new ImageIcon("src/main/java/arm/images/"+mat[i][j]+".png"));
-                ImageIcon originalIcon = new ImageIcon("src/main/java/arm/images/" + cartas.mat[i][j] + ".png");
+                label.setBounds(200 + (j * 63) + (j * 10), 70 + (i * 80) + (i * 10), 63, 80);
+                ImageIcon originalIcon = new ImageIcon("src/main/java/arm/images/" + cartas.matAux[i][j] + ".png");
                 Image image = originalIcon.getImage().getScaledInstance(63, 80, Image.SCALE_SMOOTH);
-                ImageIcon icon = new ImageIcon(image);
-                label.setIcon(icon);
-                label.setBounds(200 + (i * 63) + (i * 10), 70 + (j * 80) + (j * 10), 63, 80);
+               label.setIcon(new ImageIcon(image));
                 label.setVisible(true);
                 game_panel.add(label, 0);
                 fila.add(label);
-
             }
             matriz.add(fila);
 
@@ -122,11 +116,10 @@ public class Game {
 
 
         //event of click
-
         button_start.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 //System.out.println("click");
-               player = JOptionPane.showInputDialog(window, "Enter your name", "whrite here");
+                player = JOptionPane.showInputDialog(window, "Enter your name", "whrite here");
                 while (player == null || player.equals("")) {
                     player = JOptionPane.showInputDialog(window, "Enter your name", "whrite here");
                 }
@@ -138,9 +131,14 @@ public class Game {
             }
         });
 
-
         window.setVisible(true);
     }
+
+
+
+
+
+
 
 
 
