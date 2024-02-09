@@ -1,21 +1,27 @@
 
-m	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¹Â8è¯¾Ø1
-u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8ì¯¾Ø1
-x	java:S116"]Rename this field "presentation_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÖêq8Ùº¾Ø1
-~	java:S116"bRename this field "Presentation_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©û•¦8Ùº¾Ø1
-s	java:S116"WRename this field "button_start" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆŒ¸Ü8Úº¾Ø1
-v	java:S116"URename this field "game_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹œ›äüÿÿÿÿ8Úº¾Ø1
+m	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¹Â8…Í¾¹Ø1
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8•Í¾¹Ø1
+x	java:S116"]Rename this field "presentation_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÖêq8¡Í¾¹Ø1
+~	java:S116"bRename this field "Presentation_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©û•¦8£Í¾¹Ø1
+s	java:S116"WRename this field "button_start" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆŒ¸Ü8¥Í¾¹Ø1
+v	java:S116"URename this field "game_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹œ›äüÿÿÿÿ8§Í¾¹Ø1
+v	java:S116"URename this field "FondoJuego" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æºûşÿÿÿÿ8³Í¾¹Ø1
+w	java:S116"VRename this field "name_player" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¦°­ùÿÿÿÿ8³Í¾¹Ø1
 N
-java:S1197",Move the array designators [][] to the type.(ÀÈ»²ùÿÿÿÿ8åº¾Ø1
-N
-java:S1197",Move the array designators [][] to the type.(¨‰Õãşÿÿÿÿ8æº¾Ø1
+java:S1197",Move the array designators [][] to the type.(ÀÈ»²ùÿÿÿÿ8¿Í¾¹Ø1
+X	java:S125"<This block of commented-out lines of code should be removed.(Í…±™8ÀÍ¾¹Ø1
+X	java:S125"<This block of commented-out lines of code should be removed.(´—Ùæ8ÁÍ¾¹Ø1
 k
-java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ÁŞÃôüÿÿÿÿ8îº¾Ø1
+java:S3252$"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ÁŞÃôüÿÿÿÿ8ËÍ¾¹Ø1
 h
-java:S1117+"KRename "Presentation_background" which hides the field declared at line 14.(Ÿ¹Â8öº¾Ø1
+java:S11171"KRename "Presentation_background" which hides the field declared at line 18.(Ÿ¹Â8ÕÍ¾¹Ø1
+V
+java:S1117d":Rename "matriz" which hides the field declared at line 22.(‚²æP8ıÍ¾¹Ø1
+X	java:S125c"<This block of commented-out lines of code should be removed.(½ˆòÒ8şÍ¾¹Ø1
 \
-java:S1161O":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8Ÿ»¾Ø1
-G	java:S106P"+Replace this use of System.out by a logger.(ÿÒüë8¡»¾Ø1
-o	java:S100X"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™“®şûÿÿÿÿ8£»¾Ø1
-G	java:S106t"+Replace this use of System.out by a logger.(úÇº—8µ»¾Ø1
-L	java:S106v"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8º»¾Ø1
+java:S1161x":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8¼ÁÄ¹Ø1
+X	java:S125y"<This block of commented-out lines of code should be removed.(ì×¡ˆ8½ÁÄ¹Ø1
+O
+java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8ÂÁ¹Ø1
+[
+java:S1128	"9Remove this unused import 'java.awt.image.BufferedImage'.(×íĞ‡şÿÿÿÿ8ÃÁ¹Ø1
