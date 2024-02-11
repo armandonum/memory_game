@@ -13,8 +13,6 @@ U
 %src/main/java/arm/Game/Movements.java,2/a/2a8475f1feeffc30280a5b00a9d4851a60f8123b
 R
 "src/main/java/arm/Game/Events.java,e/b/eb32068132bd0cd715de77af5e8defe54069ead4
-Q
-!src/main/java/arm/Game/GAme2.java,9/e/9edc42abd3a49f29d0d649847e12754e0a83ccc3
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
 S
