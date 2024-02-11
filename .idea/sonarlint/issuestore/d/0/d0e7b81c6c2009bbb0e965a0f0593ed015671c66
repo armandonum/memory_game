@@ -1,27 +1,45 @@
 
-m	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¹Â8…Í¾¹Ø1
-u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8•Í¾¹Ø1
-x	java:S116"]Rename this field "presentation_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÖêq8¡Í¾¹Ø1
-~	java:S116"bRename this field "Presentation_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©û•¦8£Í¾¹Ø1
-s	java:S116"WRename this field "button_start" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆŒ¸Ü8¥Í¾¹Ø1
-v	java:S116"URename this field "game_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹œ›äüÿÿÿÿ8§Í¾¹Ø1
-v	java:S116"URename this field "FondoJuego" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æºûşÿÿÿÿ8³Í¾¹Ø1
-w	java:S116"VRename this field "name_player" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¦°­ùÿÿÿÿ8³Í¾¹Ø1
+x
+java:S1192€"[Define a constant instead of duplicating this literal "src/main/java/arm/images2/" 5 times.(Â¨Ğ(8•ã°¶Ù1
+n
+java:S1192¢"KDefine a constant instead of duplicating this literal "Write here" 4 times.(ªµÇÃùÿÿÿÿ8œã°¶Ù1
+s
+java:S1192¢"PDefine a constant instead of duplicating this literal "Enter your name" 4 times.(ªµÇÃùÿÿÿÿ8£ã°¶Ù1
+R
+java:S1066Õ"/Merge this if statement with the enclosing one.(Õ‘²ÿÿÿÿÿ8§ã°¶Ù1
+K
+java:S1604‹"(Make this anonymous inner class a lambda(ïö»Àüÿÿÿÿ8«ã°¶Ù1
+F
+java:S1604˜"(Make this anonymous inner class a lambda(âª‰±8¬ã°¶Ù1
+K
+java:S1604è"(Make this anonymous inner class a lambda(îï›ûÿÿÿÿ8®ã°¶Ù1
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8‚‘†¶Ù1
+y	java:S116"]Rename this field "presentation_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯‚8¤ò°¶Ù1
+~	java:S116"bRename this field "Presentation_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©û•¦8¤ò°¶Ù1
+x	java:S116"WRename this field "button_start" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ·‹şÿÿÿÿ8¤ò°¶Ù1
+~	java:S116"]Rename this field "button_bod_esponja" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¬¯¸ûÿÿÿÿ8¤ò°¶Ù1
+v	java:S116"URename this field "game_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹œ›äüÿÿÿÿ8¤ò°¶Ù1
+v	java:S116"URename this field "FondoJuego" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æºûşÿÿÿÿ8¥ò°¶Ù1
+v	java:S116"[Rename this field "tiempo_de_espera" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚŸÑk8¥ò°¶Ù1
+v	java:S116"ZRename this field "contador_tiempo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤›½8¥ò°¶Ù1
+w	java:S116&"VRename this field "name_player" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¦°­ùÿÿÿÿ8¦ò°¶Ù1
+C
+java:S1659"!Declare "seg" on a separate line.(¼»«åúÿÿÿÿ8«ò°¶Ù1
 N
-java:S1197",Move the array designators [][] to the type.(ÀÈ»²ùÿÿÿÿ8¿Í¾¹Ø1
-X	java:S125"<This block of commented-out lines of code should be removed.(Í…±™8ÀÍ¾¹Ø1
-X	java:S125"<This block of commented-out lines of code should be removed.(´—Ùæ8ÁÍ¾¹Ø1
+java:S1197",Move the array designators [][] to the type.(ÀÈ»²ùÿÿÿÿ8Ïò°¶Ù1
 k
-java:S3252$"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ÁŞÃôüÿÿÿÿ8ËÍ¾¹Ø1
-h
-java:S11171"KRename "Presentation_background" which hides the field declared at line 18.(Ÿ¹Â8ÕÍ¾¹Ø1
-V
-java:S1117d":Rename "matriz" which hides the field declared at line 22.(‚²æP8ıÍ¾¹Ø1
-X	java:S125c"<This block of commented-out lines of code should be removed.(½ˆòÒ8şÍ¾¹Ø1
-\
-java:S1161x":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8¼ÁÄ¹Ø1
-X	java:S125y"<This block of commented-out lines of code should be removed.(ì×¡ˆ8½ÁÄ¹Ø1
-O
-java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8ÂÁ¹Ø1
-[
-java:S1128	"9Remove this unused import 'java.awt.image.BufferedImage'.(×íĞ‡şÿÿÿÿ8ÃÁ¹Ø1
+java:S32522"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ÁŞÃôüÿÿÿÿ8Øò°¶Ù1
+K
+java:S1481|")Remove this unused "fila" local variable.(ùõãÉıÿÿÿÿ8Ÿô°¶Ù1
+]
+java:S1161¡":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8Äô°¶Ù1
+]
+java:S1161°":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8Îô°¶Ù1
+q
+java:S3776Á"SRefactor this method to reduce its Cognitive Complexity from 109 to the 15 allowed.(¹à‰Ÿ8Øô°¶Ù1
+]
+java:S1161Ğ":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8õô°¶Ù1
+M	java:S106Ñ"+Replace this use of System.out by a logger.(œ·Ôøÿÿÿÿ8şô°¶Ù1
+H	java:S106Ü"+Replace this use of System.out by a logger.(¦§¿Ş8…õ°¶Ù1
+H	java:S106â"+Replace this use of System.out by a logger.(¦§¿Ş8õ°¶Ù1
+H	java:S106õ"+Replace this use of System.out by a logger.(Àš‰»8²ñ³¶Ù1
