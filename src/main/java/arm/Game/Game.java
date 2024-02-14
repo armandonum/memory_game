@@ -14,18 +14,23 @@ public class Game {
     // Instancias
     Carts cartas = new Carts();  // Instanciamos la clase cartas
     Score score = new Score(); // Instanciamos la clase score
+    Lives lives = new Lives(3); // Instanciamos la clase lives con 3 vidas
 
     // Atributos
     JFrame window;
     JPanel presentation_panel; // Paneles que podemos ir cambiando
     JLabel Presentation_background;
-    JLabel button_start; // Botón para inicio rápido
+    JLabel button_OnePice; // Botón para inicio rápido
     JLabel button_bod_esponja; // Para ir al nivel de bod esponja
+    JLabel button_objetos;
     JPanel game_panel;
     JLabel FondoJuego;
     JLabel matriz[][];
     JLabel scoreLabel;
     JLabel highScoresLabel;
+    JLabel button_inicio;
+    JLabel buton_lives;
+
     Timer tiempo;
     Timer tiempo_de_espera;
     Timer tiempoEsp;
@@ -38,16 +43,16 @@ public class Game {
 
     String player; // Para colocar el nombre del jugador
     JLabel name_player;
-    int numCarta;
+    //int numCarta;
     int posicioAntX;
     int posicioAntY;
-    int numCartaNew;
+    //int numCartaNew;
     int posicioXNew;
     int posicioYNew;
 
     public Game() {
         window = new JFrame("memory game");
-        window.setSize(670, 1000);
+        window.setSize(670, 700);
         window.setLayout(null);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setLocationRelativeTo(null);
@@ -63,27 +68,13 @@ public class Game {
         // Fondo de presentación
         Presentation_background = new JLabel();
         Presentation_background.setLocation(0, 0);
-        Presentation_background.setIcon(new ImageIcon("src/main/java/arm/images/Fondo.jpg"));
+        Presentation_background.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/Fondo.png"));
         Presentation_background.setSize(window.getWidth(), window.getHeight());
         Presentation_background.setVisible(true);
         presentation_panel.add(Presentation_background, 0);
         window.add(presentation_panel);
 
-        // Botón de inicio
-        button_start = new JLabel();
-        button_start.setIcon(new ImageIcon("src/main/java/arm/images/start.png"));
-        button_start.setSize(200, 61);
-        button_start.setLocation(25, 0);
-        button_start.setVisible(true);
-        presentation_panel.add(button_start, 0);
 
-        // Botón de Bod esponja
-        button_bod_esponja = new JLabel();
-        button_bod_esponja.setIcon(new ImageIcon("src/main/java/arm/images/button.png"));
-        button_bod_esponja.setSize(200, 61);
-        button_bod_esponja.setLocation(300, 450);
-        button_bod_esponja.setVisible(true);
-        presentation_panel.add(button_bod_esponja, 0);
 
         // Panel de juego
         game_panel = new JPanel();
@@ -95,11 +86,24 @@ public class Game {
 
         // Fondo de juego
         FondoJuego = new JLabel();
-        FondoJuego.setIcon(new ImageIcon("src/main/java/arm/images/Fondo.jpg"));
+        FondoJuego.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/Fondo.jpg"));
         FondoJuego.setSize(window.getWidth(), window.getHeight());
         FondoJuego.setLocation(0, 0);
         FondoJuego.setVisible(true);
+
         game_panel.add(FondoJuego, 0);
+
+        //***** botonoes de inicio*****
+        botones_inicio();
+
+        // boton de inicio;
+        button_inicio = new JLabel();
+        button_inicio.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/inicio.png"));
+        button_inicio.setSize(75, 75);
+        button_inicio.setLocation(150, 600);
+        button_inicio.setVisible(true);
+        presentation_panel.add(button_inicio, 0);
+
 
         // Nombre de jugador
         name_player = new JLabel();
@@ -120,18 +124,18 @@ public class Game {
         // Lógica de la matriz
         cartas.numbre_randon();
 
+
         // Matriz de imágenes
         matriz = new JLabel[4][5];
         for (int i = 0; i < 4; i++) {
-            LinkedList<JLabel> fila = new LinkedList<>();
+            //LinkedList<JLabel> fila = new LinkedList<>();
             for (int j = 0; j < 5; j++) {
                 matriz[i][j] = new JLabel();
                 matriz[i][j].setBounds(140 + (j * 80) + (j * 10), 100 + (i * 100) + (i * 10), 80, 100);
                 ImageIcon originalIcon = new ImageIcon("src/main/java/arm/images/" + cartas.matAux[i][j] + ".png");
-                Image image = originalIcon.getImage().getScaledInstance(80, 100, Image.SCALE_SMOOTH);
-                matriz[i][j].setIcon(new ImageIcon(image));
-                matriz[i][j].setVisible(true);
-                game_panel.add(matriz[i][j], 0);
+                mostrar_cartas(originalIcon, i, j);
+               matriz[i][j].setVisible(true);
+               game_panel.add(matriz[i][j], 0);
             }
         }
 
@@ -159,7 +163,7 @@ public class Game {
         });
 
         // Evento de clic en las cartas
-        button_start.addMouseListener(new MouseAdapter() {
+        button_OnePice.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 player = JOptionPane.showInputDialog(window, "Enter your name", "Write here");
                 while (player == null || player.equals("")) {
@@ -170,43 +174,105 @@ public class Game {
                 presentation_panel.setVisible(false);
                 window.add(game_panel);
                 game_panel.setVisible(true);
-                addMouseListenerToCards();
+                game_panel.add(button_inicio, 0);
+                addMouseListenerToCards(1);
             }
         });
-
+        button_objetos.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                player = JOptionPane.showInputDialog(window, "Enter your name", "Write here");
+                while (player == null || player.equals("")) {
+                    player = JOptionPane.showInputDialog(window, "Enter your name", "Write here");
+                }
+                for (int i = 0; i < 4; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        mostrar_cartas(new ImageIcon("src/main/java/arm/images2/" + cartas.matAux[i][j] + ".png"), i, j);
+                    }
+                }
+                name_player.setText("Player: " + player);
+                tiempo.start();
+                presentation_panel.setVisible(false);
+                window.add(game_panel);
+                game_panel.setVisible(true);
+                addMouseListenerToCards(2);
+            }
+        });
         button_bod_esponja.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 player = JOptionPane.showInputDialog(window, "Enter your name", "Write here");
                 while (player == null || player.equals("")) {
                     player = JOptionPane.showInputDialog(window, "Enter your name", "Write here");
                 }
+                for (int i = 0; i < 4; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        mostrar_cartas(new ImageIcon("src/main/java/arm/images3/" + cartas.matAux[i][j] + ".png"), i, j);
+
+                    }
+                }
                 name_player.setText("Player: " + player);
                 tiempo.start();
                 presentation_panel.setVisible(false);
                 window.add(game_panel);
                 game_panel.setVisible(true);
-                addMouseListenerToCards();
+                addMouseListenerToCards(3);
             }
         });
+
 
         scoreLabel = new JLabel();
         scoreLabel.setSize(160, 20);
         scoreLabel.setLocation(20, 80);
         scoreLabel.setForeground(Color.white);
+        scoreLabel.setText("Score: " + score.getScore());
         scoreLabel.setVisible(true);
         game_panel.add(scoreLabel, 0);
 
-        highScoresLabel = new JLabel();
-        highScoresLabel.setSize(160, 20);
-        highScoresLabel.setLocation(window.getWidth() - 200, 40);
-        highScoresLabel.setForeground(Color.white);
-        highScoresLabel.setVisible(true);
-        game_panel.add(highScoresLabel, 0);
+        //lives
+        buton_lives = new JLabel();
+       buton_lives.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/vidas.png"));
+        buton_lives.setSize(54, 24);
+        buton_lives.setLocation(20+24+5, 100);
+        buton_lives.setForeground(Color.white);
+        buton_lives.setText(" : "+lives.getLives());
+        buton_lives.setVisible(true);
+        game_panel.add(buton_lives, 0);
+
+
+
 
         window.setVisible(true);
     }
+    private void mostrar_cartas(ImageIcon originalIcon, int i, int j){
+        Image image = originalIcon.getImage().getScaledInstance(80, 100, Image.SCALE_SMOOTH);
+        matriz[i][j].setIcon(new ImageIcon(image));
+    }
+    private void botones_inicio(){
+        // Botón de inicio
+        button_OnePice = new JLabel();
+        button_OnePice.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/one_pice.png"));
+        button_OnePice.setSize(277, 62);
+        button_OnePice.setLocation(200, 200);
+        button_OnePice.setVisible(true);
+        presentation_panel.add(button_OnePice, 0);
 
-    private void addMouseListenerToCards() {
+        // Botón de Bod esponja
+        button_bod_esponja = new JLabel();
+        button_bod_esponja.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/bod_esponja.png"));
+        button_bod_esponja.setSize(277, 62);
+        button_bod_esponja.setLocation(200, 300);
+        button_bod_esponja.setVisible(true);
+        presentation_panel.add(button_bod_esponja, 0);
+        // boton objetos
+        button_objetos = new JLabel();
+        button_objetos.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/objetos.png"));
+        button_objetos.setSize(277, 62);
+        button_objetos.setLocation(200, 400);
+        button_objetos.setVisible(true);
+        presentation_panel.add(button_objetos, 0);
+
+    }
+
+    private void addMouseListenerToCards(int control) {
         contSegEspera = 0;
         contador = 0;
         bandera = true;
@@ -228,19 +294,23 @@ public class Game {
                             if (e.getSource() == matriz[k][l]) {
                                 if (cartas.matAux[k][l] == 0 && contador != 2) {
                                     cartas.matAux[k][l] = cartas.mat[k][l];
-                                    ImageIcon originalIcon = new ImageIcon("src/main/java/arm/images/" + cartas.mat[k][l] + ".png");
-                                    Image image = originalIcon.getImage().getScaledInstance(80, 100, Image.SCALE_SMOOTH);
-                                    matriz[k][l].setIcon(new ImageIcon(image));
+                                    if (control==1){
+                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images/" + cartas.matAux[k][l] + ".png"), k, l);
+                                    }else if (control==2){
+                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images2/" + cartas.matAux[k][l] + ".png"), k, l);
+                                    }else if (control==3){
+                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images3/" + cartas.matAux[k][l] + ".png"), k, l);
+                                    }
                                     contador++;
                                     if (contador == 1) {
                                         System.out.println("contador: " + contador);
-                                        numCartaNew = cartas.mat[k][l];
+                                        //numCartaNew = cartas.mat[k][l];
                                         posicioXNew = k;
                                         posicioYNew = l;
                                     }
                                     if (contador == 2) {
                                         System.out.println("contador: " + contador);
-                                        numCarta = cartas.mat[k][l];
+                                       // numCarta = cartas.mat[k][l];
                                         posicioAntX = k;
                                         posicioAntY = l;
                                     }
@@ -259,26 +329,45 @@ public class Game {
                                                     cartas.matAux[posicioXNew][posicioYNew] = -1;
                                                     cartas.matAux[posicioAntX][posicioAntY] = -1;
                                                     System.out.println("son iguales");
-                                                    ImageIcon originalIcon2 = new ImageIcon("src/main/java/arm/images/" + cartas.matAux[posicioXNew][posicioYNew] + ".png");
-                                                    Image image2 = originalIcon2.getImage().getScaledInstance(80, 100, Image.SCALE_SMOOTH);
-                                                    matriz[posicioXNew][posicioYNew].setIcon(new ImageIcon(image2));
-                                                    ImageIcon originalIcon3 = new ImageIcon("src/main/java/arm/images/" + cartas.matAux[posicioAntX][posicioAntY] + ".png");
-                                                    Image image3 = originalIcon3.getImage().getScaledInstance(80, 100, Image.SCALE_SMOOTH);
-                                                    matriz[posicioAntX][posicioAntY].setIcon(new ImageIcon(image3));
+                                                    if (control==1) {
+                                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images/" + cartas.matAux[posicioXNew][posicioYNew] + ".png"), posicioXNew, posicioYNew);
+                                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images/" + cartas.matAux[posicioAntX][posicioAntY] + ".png"), posicioAntX, posicioAntY);
+                                                    }else if (control==2){
+                                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images2/" + cartas.matAux[posicioXNew][posicioYNew] + ".png"), posicioXNew, posicioYNew);
+                                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images2/" + cartas.matAux[posicioAntX][posicioAntY] + ".png"), posicioAntX, posicioAntY);
+                                                    }else if (control==3){
+                                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images3/" + cartas.matAux[posicioXNew][posicioYNew] + ".png"), posicioXNew, posicioYNew);
+                                                        mostrar_cartas(new ImageIcon("src/main/java/arm/images3/" + cartas.matAux[posicioAntX][posicioAntY] + ".png"), posicioAntX, posicioAntY);
+                                                    }
                                                     contador = 0;
                                                     score.addToScore(10); // Aumenta el puntaje si las cartas son iguales
                                                     score.updateHighScores(); // Actualiza los puntajes altos
-                                                    updateScoreLabel(); // Actualiza el JLabel del puntaje
-                                                    updateHighScoresLabel(); // Actualiza el JLabel de los puntajes altos
+                                                    scoreLabel.setText("Score: " + score.getScore()); // Actualiza el JLabel del puntaje
+                                                }else {
+                                                    lives.removeLife(); // Quita una vida si las cartas no son iguales
+                                                    buton_lives.setText(" : "+lives.getLives());
+                                                    if(!lives.hasLives()) {
+                                                        JOptionPane.showMessageDialog(window, "Game over");
+                                                        // reiniciar el juego
+                                                        window.dispose();
+                                                        new Game();
+
+
+                                                    }
                                                 }
 
                                                 for (int m = 0; m < 4; m++) {
                                                     for (int n = 0; n < 5; n++) {
                                                         if (cartas.matAux[m][n] != 0 && cartas.matAux[m][n] != -1) {
                                                             cartas.matAux[m][n] = 0;
-                                                            ImageIcon originalIcon2 = new ImageIcon("src/main/java/arm/images/" + cartas.matAux[m][n] + ".png");
-                                                            Image image2 = originalIcon2.getImage().getScaledInstance(80, 100, Image.SCALE_SMOOTH);
-                                                            matriz[m][n].setIcon(new ImageIcon(image2));
+                                                            if(control==1){
+                                                                mostrar_cartas(new ImageIcon("src/main/java/arm/images/" + cartas.matAux[m][n] + ".png"), m, n);
+                                                            }else if(control==2){
+                                                                mostrar_cartas(new ImageIcon("src/main/java/arm/images2/" + cartas.matAux[m][n] + ".png"), m, n);
+                                                            }else if(control==3){
+                                                                mostrar_cartas(new ImageIcon("src/main/java/arm/images3/" + cartas.matAux[m][n] + ".png"), m, n);
+                                                            }
+
                                                             contador = 0;
                                                         }
                                                     }
@@ -304,19 +393,8 @@ public class Game {
             });
         }
     }
-    private void updateScoreLabel() {
-        scoreLabel.setText("Score: " + score.getScore());
-    }
 
-    private void updateHighScoresLabel() {
-        StringBuilder highScoresText = new StringBuilder("<html>High Scores:<br>");
-        List<Integer> highScores = score.getHighScores();
-        for (int i = 0; i < highScores.size(); i++) {
-            highScoresText.append(i + 1).append(". ").append(highScores.get(i)).append("<br>");
-        }
-        highScoresText.append("</html>");
-        highScoresLabel.setText(highScoresText.toString());
-    }
+
 
     public static void main(String[] args) {
         new Game();

@@ -1,45 +1,66 @@
 
 }
-java:S1192‚"ZDefine a constant instead of duplicating this literal "src/main/java/arm/images/" 5 times.(§­³èüÿÿÿÿ8Œœõ«Ú1
+java:S1192‡"ZDefine a constant instead of duplicating this literal "src/main/java/arm/images/" 5 times.(§­³èüÿÿÿÿ8ˆÍ¡µÚ1
 s
-java:S1192¤"PDefine a constant instead of duplicating this literal "Enter your name" 4 times.(ªµÇÃùÿÿÿÿ8œõ«Ú1
+java:S1192¨"PDefine a constant instead of duplicating this literal "Enter your name" 6 times.(ªµÇÃùÿÿÿÿ8Í¡µÚ1
+~
+java:S1192½"[Define a constant instead of duplicating this literal "src/main/java/arm/images2/" 5 times.(×ß×«øÿÿÿÿ8Í¡µÚ1
+y
+java:S1192Ğ"[Define a constant instead of duplicating this literal "src/main/java/arm/images3/" 5 times.(Ã±Áÿ8‘Í¡µÚ1
+g
+java:S1192¬"IDefine a constant instead of duplicating this literal "Player: " 3 times.(ÉÃç8‘Í¡µÚ1
 n
-java:S1192¤"KDefine a constant instead of duplicating this literal "Write here" 4 times.(ªµÇÃùÿÿÿÿ8œõ«Ú1
+java:S1192¨"KDefine a constant instead of duplicating this literal "Write here" 6 times.(ªµÇÃùÿÿÿÿ8’Í¡µÚ1
 R
-java:S1066å"/Merge this if statement with the enclosing one.(Õ‘²ÿÿÿÿÿ8»¬„­Ú1
+java:S1066§"/Merge this if statement with the enclosing one.(Õ‘²ÿÿÿÿÿ8—Í¡µÚ1
 K
-java:S1604"(Make this anonymous inner class a lambda(ïö»Àüÿÿÿÿ8’œõ«Ú1
+java:S1604‘"(Make this anonymous inner class a lambda(ïö»Àüÿÿÿÿ8¥Í¡µÚ1
 F
-java:S1604š"(Make this anonymous inner class a lambda(âª‰±8’œõ«Ú1
+java:S1604"(Make this anonymous inner class a lambda(âª‰±8¦Í¡µÚ1
 K
-java:S1604ø"(Make this anonymous inner class a lambda(îï›ûÿÿÿÿ8½¬„­Ú1
-u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8 „Õ«Ú1
-y	java:S116"]Rename this field "presentation_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯‚8Ñ õ«Ú1
-~	java:S116"bRename this field "Presentation_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©û•¦8Ñ õ«Ú1
-x	java:S116"WRename this field "button_start" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ·‹şÿÿÿÿ8Ò õ«Ú1
-~	java:S116"]Rename this field "button_bod_esponja" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¬¯¸ûÿÿÿÿ8Ò õ«Ú1
-v	java:S116"URename this field "game_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹œ›äüÿÿÿÿ8Ò õ«Ú1
-v	java:S116"URename this field "FondoJuego" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æºûşÿÿÿÿ8ßš­Ú1
-v	java:S116"[Rename this field "tiempo_de_espera" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚŸÑk8àš­Ú1
-v	java:S116 "ZRename this field "contador_tiempo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤›½8àš­Ú1
-w	java:S116("VRename this field "name_player" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¦°­ùÿÿÿÿ8àš­Ú1
+java:S1604¾"(Make this anonymous inner class a lambda(îï›ûÿÿÿÿ8§Í¡µÚ1
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8ÑÍ¡µÚ1
+y	java:S116"]Rename this field "presentation_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯‚8‹ö¡µÚ1
+~	java:S116"bRename this field "Presentation_background" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©û•¦8‹ö¡µÚ1
+z	java:S116"YRename this field "button_OnePice" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘õ•ùÿÿÿÿ8Œö¡µÚ1
+~	java:S116"]Rename this field "button_bod_esponja" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¬¯¸ûÿÿÿÿ8Œö¡µÚ1
+z	java:S116"YRename this field "button_objetos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ã¯Ôÿÿÿÿÿ8Œö¡µÚ1
+v	java:S116"URename this field "game_panel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹œ›äüÿÿÿÿ8Œö¡µÚ1
+v	java:S116"URename this field "FondoJuego" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æºûşÿÿÿÿ8Œö¡µÚ1
+y	java:S116"XRename this field "button_inicio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï­Ëúÿÿÿÿ8Œö¡µÚ1
+r	java:S116 "VRename this field "buton_lives" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¼¤8Œö¡µÚ1
+v	java:S116#"[Rename this field "tiempo_de_espera" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚŸÑk8Œö¡µÚ1
+v	java:S116%"ZRename this field "contador_tiempo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤›½8ö¡µÚ1
+w	java:S116-"VRename this field "name_player" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢¦°­ùÿÿÿÿ8ö¡µÚ1
 C
-java:S1659!"!Declare "seg" on a separate line.(¼»«åúÿÿÿÿ8äš­Ú1
+java:S1659&"!Declare "seg" on a separate line.(¼»«åúÿÿÿÿ8”ö¡µÚ1
 N
-java:S1197",Move the array designators [][] to the type.(ÀÈ»²ùÿÿÿÿ8ñš­Ú1
+java:S1197",Move the array designators [][] to the type.(ÀÈ»²ùÿÿÿÿ8¢ö¡µÚ1
+]	java:S125."<This block of commented-out lines of code should be removed.(è³÷Ùùÿÿÿÿ8åòÂµÚ1
+W	java:S1251"<This block of commented-out lines of code should be removed.(ö”û68İç¼µÚ1
+o
+java:S37765"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(’¼Ùî8¤ö¡µÚ1
 k
-java:S32524"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ÁŞÃôüÿÿÿÿ8„›­Ú1
-K
-java:S1481~")Remove this unused "fila" local variable.(ùõãÉıÿÿÿÿ8ß›­Ú1
+java:S32529"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ÁŞÃôüÿÿÿÿ8¬ö¡µÚ1
+]	java:S125c"<This block of commented-out lines of code should be removed.(Ã–å°ùÿÿÿÿ8Ëö¡µÚ1
+Y	java:S125ƒ"<This block of commented-out lines of code should be removed.(«Í²Ÿ8×ö¡µÚ1
 ]
-java:S1161£":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8™œ­Ú1
+java:S1161§":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8èö¡µÚ1
 ]
-java:S1161²":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8¶œ­Ú1
+java:S1161¶":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8ğö¡µÚ1
+]
+java:S1161É":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8üö¡µÚ1
+k	java:S100õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şã¦ß8÷¡µÚ1
+p	java:S100ù"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ×¡Ìûÿÿÿÿ8•÷¡µÚ1
 q
-java:S3776Ñ"SRefactor this method to reduce its Cognitive Complexity from 109 to the 15 allowed.(¹à‰Ÿ8ùœ­Ú1
+java:S3776“"SRefactor this method to reduce its Cognitive Complexity from 155 to the 15 allowed.(æ¹ÊĞ8¤÷¡µÚ1
 ]
-java:S1161à":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8‰­Ú1
-M	java:S106á"+Replace this use of System.out by a logger.(œ·Ôøÿÿÿÿ8Œ­Ú1
-H	java:S106ì"+Replace this use of System.out by a logger.(¦§¿Ş8—­Ú1
-H	java:S106ò"+Replace this use of System.out by a logger.(¦§¿Ş8™­Ú1
-H	java:S106…"+Replace this use of System.out by a logger.(Àš‰»8£­Ú1
+java:S1161¢":Add the "@Override" annotation above this method signature(Ä Ïúüÿÿÿÿ8¶÷¡µÚ1
+M	java:S106£"+Replace this use of System.out by a logger.(œ·Ôøÿÿÿÿ8·÷¡µÚ1
+H	java:S106²"+Replace this use of System.out by a logger.(¦§¿Ş8¿÷¡µÚ1
+X	java:S125³"<This block of commented-out lines of code should be removed.(Ÿ¢38çñ¾µÚ1
+H	java:S106¸"+Replace this use of System.out by a logger.(¦§¿Ş8À÷¡µÚ1
+Y	java:S125¹"<This block of commented-out lines of code should be removed.(Å“óõ8±†ÂµÚ1
+H	java:S106Ë"+Replace this use of System.out by a logger.(Àš‰»8È÷¡µÚ1
+M
+java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18¬ò¾µÚ1
