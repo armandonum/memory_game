@@ -14,7 +14,7 @@ public class Carts {
 
     public void numbre_randon() {
 
-        while (numberList.size() < 20) { // 4x5 = 20 cartas
+        while (numberList.size() < 20) {
             int randomNumber = aleatorio.nextInt(10) + 1;
             if (!numberList.contains(randomNumber)) {//verifica si el numero existe en la lista
                 numberList.add(randomNumber);

@@ -98,11 +98,19 @@ public class Game {
 
         // boton de inicio;
         button_inicio = new JLabel();
-        button_inicio.setIcon(new ImageIcon("src/main/java/arm/imagenes_inicio/inicio.png"));
+
+        ImageIcon icon = new ImageIcon("src/main/java/arm/imagenes_inicio/inicio.png");
+        Image img = icon.getImage();
+        Image newimg = img.getScaledInstance(75, 75, java.awt.Image.SCALE_SMOOTH);
+        icon = new ImageIcon(newimg);
+        button_inicio.setIcon(icon);
+
         button_inicio.setSize(75, 75);
-        button_inicio.setLocation(150, 600);
+        button_inicio.setLocation(150, 560);
         button_inicio.setVisible(true);
-        presentation_panel.add(button_inicio, 0);
+        game_panel.add(button_inicio, 0);
+
+
 
 
         // Nombre de jugador
@@ -218,6 +226,12 @@ public class Game {
             }
         });
 
+        button_inicio.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                window.dispose();
+                new Game();
+            }
+        });
 
         scoreLabel = new JLabel();
         scoreLabel.setSize(160, 20);
