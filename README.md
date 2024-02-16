@@ -10,6 +10,8 @@ It is a simple memory game developed in Java using data structure to implement p
 ## instructions for use
 1. clone or download the repository
 2. make sure you have java installed
+
+
 ![img.png](imgs/img.png)
 ![img_1.png](imgs/img_1.png)  ![img_2.png](imgs/img_2.png)
 
