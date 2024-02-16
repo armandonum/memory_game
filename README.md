@@ -16,13 +16,17 @@ It is a simple memory game developed in Java using data structure to implement p
 ![img_1.png](imgs/img_1.png)  ![img_2.png](imgs/img_2.png)
 
 ## Data Structures Used
-- LinkedList for Handling Card Numbers (Carts Class):
-
-    A LinkedList is used to generate and shuffle the numbers that represent the cards in the game
 
 - linkedList for the management of the cards (Carts Class):
 
     A LinkedList is used to manage the cards in the game. The list allows for efficient management of the cards, as the cards are removed from the list when they are matched.
+- LinkedList for the management of the player's score (Score Class):
+
+  A LinkedList is used to manage the player's score. The list allows for efficient management of the player's score, as the score is increased when the player finds a pair of identical cards.
+
+- LinkedList for the management of the player's score (Score Class):
+    
+  A LinkedList is used to manage the player's score. The list allows for efficient management of the player's score, as the score is increased when the player finds a pair of identical cards.
 
 - Queue for Player Lives Management (Lives Class):
 
