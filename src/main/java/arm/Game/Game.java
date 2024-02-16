@@ -37,6 +37,7 @@ public class Game {
     JLabel contador_tiempo;
     int min, seg;
     int contador;
+    int puntos;
     int contSegEspera;
     boolean bandera;
     boolean bandera2;
@@ -291,6 +292,7 @@ public class Game {
         contador = 0;
         bandera = true;
         bandera2 = true;
+        puntos=10;
 
         List<JLabel> cardLabels = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
@@ -339,6 +341,7 @@ public class Game {
                                             if (contador == 2 && contSegEspera == 1) {
                                                 tiempoEsp.stop();
                                                 contSegEspera = 0;
+
                                                 if (cartas.matAux[posicioXNew][posicioYNew] == cartas.matAux[posicioAntX][posicioAntY]) {
                                                     cartas.matAux[posicioXNew][posicioYNew] = -1;
                                                     cartas.matAux[posicioAntX][posicioAntY] = -1;
@@ -354,9 +357,10 @@ public class Game {
                                                         mostrar_cartas(new ImageIcon("src/main/java/arm/images3/" + cartas.matAux[posicioAntX][posicioAntY] + ".png"), posicioAntX, posicioAntY);
                                                     }
                                                     contador = 0;
-                                                    score.addToScore(10); // Aumenta el puntaje si las cartas son iguales
+                                                    score.addToScore(puntos); // Aumenta el puntaje si las cartas son iguales
                                                     scoreLabel.setText("Score: " + score.getScore()); // Actualiza el JLabel del puntaje
                                                 }else {
+                                                    puntos -=2;
                                                     lives.removeLife(); // Quita una vida si las cartas no son iguales
                                                     buton_lives.setText(" : "+lives.getLives());
                                                     if(!lives.hasLives()) {
