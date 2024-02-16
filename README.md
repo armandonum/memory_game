@@ -20,9 +20,6 @@ It is a simple memory game developed in Java using data structure to implement p
 - linkedList for the management of the cards (Carts Class):
 
     A LinkedList is used to manage the cards in the game. The list allows for efficient management of the cards, as the cards are removed from the list when they are matched.
-- LinkedList for the management of the player's score (Score Class):
-
-  A LinkedList is used to manage the player's score. The list allows for efficient management of the player's score, as the score is increased when the player finds a pair of identical cards.
 
 - LinkedList for the management of the player's score (Score Class):
     

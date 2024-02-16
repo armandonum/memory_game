@@ -3,7 +3,7 @@ package arm.Game;
 import java.util.LinkedList;
 
 public class Score {
-   private LinkedList<Integer> scoreList;
+   public LinkedList<Integer> scoreList;
     public Score(){
         this.scoreList = new LinkedList<>();
     }
@@ -21,6 +21,7 @@ public class Score {
     }
 
     public void resetScore(){
+
         scoreList.clear();
     }
 
