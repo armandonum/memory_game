@@ -22,13 +22,45 @@ public class TestScore {
         score.addToScore(0);
         Assert.assertEquals(5, score.getScore());
     }
+    @Test
+    public void testGetScore() {
+        Score score = new Score();
+
+        // Verificar que el puntaje inicial es cero
+        Assert.assertEquals(0, score.getScore());
+
+        // Verificar que el puntaje se incrementa correctamente
+        score.addToScore(10);
+        Assert.assertEquals(10, score.getScore());
+    }
 
     @Test
     public void testResetScore() {
         Score score = new Score();
 
-        // Establecer un puntaje y luego restablecerlo
-        score.addToScore(20);
+        // Verificar que el puntaje inicial es cero
+        Assert.assertEquals(0, score.getScore());
+
+        // Verificar que el puntaje se incrementa correctamente
+        score.addToScore(10);
+        Assert.assertEquals(10, score.getScore());
+
+        // Verificar que el puntaje se reinicia correctamente
+        score.resetScore();
+        Assert.assertEquals(0, score.getScore());
+    }
+    @Test
+    public void testPrint() {
+        Score score = new Score();
+
+        // Verificar que el puntaje inicial es cero
+        Assert.assertEquals(0, score.getScore());
+
+        // Verificar que el puntaje se incrementa correctamente
+        score.addToScore(10);
+        Assert.assertEquals(10, score.getScore());
+
+        // Verificar que el puntaje se reinicia correctamente
         score.resetScore();
         Assert.assertEquals(0, score.getScore());
     }

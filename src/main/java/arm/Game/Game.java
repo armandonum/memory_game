@@ -8,11 +8,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.LinkedList;
 
 public class Game {
     // Instancias
-    Carts cartas = new Carts();  // Instanciamos la clase cartas
+    Cards cartas = new Cards();  // Instanciamos la clase cartas
     Score score = new Score(); // Instanciamos la clase score
     Lives lives = new Lives(3); // Instanciamos la clase lives con 3 vidas
 
@@ -132,6 +131,8 @@ public class Game {
 
         // Lógica de la matriz
         cartas.numbre_randon();
+        cartas.mezclarCads();
+        cartas.print();
 
 
         // Matriz de imágenes

@@ -23,6 +23,8 @@ public class Score {
     public void resetScore(){
         scoreList.clear();
     }
+
+
     // moetodo que muetra todos los puntajes
     public void print(){
         for(int i = 0; i < scoreList.size(); i++){

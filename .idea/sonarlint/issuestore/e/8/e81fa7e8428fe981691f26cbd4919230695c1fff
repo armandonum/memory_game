@@ -1,0 +1,17 @@
+
+ˆ
+java:S1319"kThe type of "numberList" should be an interface such as "List" rather than the implementation "LinkedList".(µÔ¦ˆ8•òÄ‘Û1
+…
+java:S1319	"hThe type of "mezclar" should be an interface such as "List" rather than the implementation "LinkedList".(ñØúÉ8ßÂÓ‘Û1
+s
+java:S1104"VMake numberList a static final constant or non-public and provide accessors if needed.(µÔ¦ˆ8ŸòÄ‘Û1
+p
+java:S1104	"SMake mezclar a static final constant or non-public and provide accessors if needed.(ñØúÉ8âÂÓ‘Û1
+l
+java:S1104"OMake mat a static final constant or non-public and provide accessors if needed.(¬†Ÿ²8”Ù‘Û1
+o
+java:S1104"RMake matAux a static final constant or non-public and provide accessors if needed.(ßô‹8Ô£Ø‘Û1
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8·£ˆ‘Û1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™“®şûÿÿÿÿ8ÌáÒ‘Û1
+G	java:S106/"+Replace this use of System.out by a logger.(úÇº—8ûáÒ‘Û1
+G	java:S1061"+Replace this use of System.out by a logger.(˜¥à§8şáÒ‘Û1
