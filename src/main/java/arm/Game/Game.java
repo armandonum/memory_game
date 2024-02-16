@@ -355,7 +355,6 @@ public class Game {
                                                     }
                                                     contador = 0;
                                                     score.addToScore(10); // Aumenta el puntaje si las cartas son iguales
-                                                    score.updateHighScores(); // Actualiza los puntajes altos
                                                     scoreLabel.setText("Score: " + score.getScore()); // Actualiza el JLabel del puntaje
                                                 }else {
                                                     lives.removeLife(); // Quita una vida si las cartas no son iguales
