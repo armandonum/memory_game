@@ -1,30 +1,35 @@
 package arm.Game;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
 public class Score {
-    private int score;
-    private List<Integer> highScores;
-
-    public Score() {
-        this.score = 0;
-        this.highScores = new ArrayList<>();
+   private LinkedList<Integer> scoreList;
+    public Score(){
+        this.scoreList = new LinkedList<>();
+    }
+    public void addToScore(int score){
+        scoreList.add(score);
     }
 
-    public void addToScore(int points) {
-        score += points;
+    public int getScore(){
+        int total = 0;
+        for(int i = 0; i < scoreList.size(); i++){
+            total += scoreList.get(i);
+            //System.out.println("Score totasl: " + scoreList.get(i));
+        }
+        return total;
     }
 
-    public int getScore() {
-        return score;
+    public void resetScore(){
+        scoreList.clear();
+    }
+    // moetodo que muetra todos los puntajes
+    public void print(){
+        for(int i = 0; i < scoreList.size(); i++){
+            System.out.println("Score: " + scoreList.get(i));
+        }
+
     }
 
-    public void resetScore() {
-        score = 0;
-    }
 
-    public List<Integer> getHighScores() {
-        return highScores;
-    }
 }

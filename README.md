@@ -20,9 +20,10 @@ It is a simple memory game developed in Java using data structure to implement p
 
     A LinkedList is used to generate and shuffle the numbers that represent the cards in the game
 
-- ArrayList for Storing High Scores (Score Class):
+- linkedList for the management of the cards (Carts Class):
 
-  An ArrayList is used to store the scores achieved by the players.
+    A LinkedList is used to manage the cards in the game. The list allows for efficient management of the cards, as the cards are removed from the list when they are matched.
+
 - Queue for Player Lives Management (Lives Class):
 
   A Queue is used to manage the player's lives. The queue allows for efficient management of remaining lives, as the player loses a life with every incorrect move in the game

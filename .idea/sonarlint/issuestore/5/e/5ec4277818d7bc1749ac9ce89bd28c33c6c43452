@@ -1,4 +1,4 @@
 
-6
-java:S1700"Rename field "score"(µŽ¼æÿÿÿÿÿ8ƒ¹ý¬Ú1
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ó¦¨;8ßœüƒÛ1
+X	java:S125"<This block of commented-out lines of code should be removed.(¸äŠ¡8’Û„Û1
+F	java:S106"+Replace this use of System.out by a logger.(Ïí‹Q8ŽóþƒÛ1

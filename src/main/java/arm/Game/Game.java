@@ -360,6 +360,8 @@ public class Game {
                                                     lives.removeLife(); // Quita una vida si las cartas no son iguales
                                                     buton_lives.setText(" : "+lives.getLives());
                                                     if(!lives.hasLives()) {
+                                                        System.out.println("lista de puntajes : " );
+                                                        score.print();
                                                         JOptionPane.showMessageDialog(window, "Game over");
                                                         // reiniciar el juego
                                                         window.dispose();
